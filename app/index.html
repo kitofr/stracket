@@ -5,7 +5,7 @@
     <title>Sträcklöpet Concept Design</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
-    <meta name="author" content="">
+    <meta name="author" content="Kristoffer Roupé">
 
     <!-- Le styles -->
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
@@ -33,6 +33,11 @@
         background-color: #f5f5f5;
       }
 
+      #carousel img{
+        height: 400px;     
+        max-height: 400px;
+      }
+
       @media (max-width: 767px){
         #footer {
           margin-left: -20 px;
@@ -57,6 +62,8 @@
       .container .credit {
         margin: 20px 0;
       }
+      .carousel-inner { text-align: center; }
+      .carousel .item > img { display: inline-block; }
 
       /* Main marketing message and sign up button */
       .jumbotron {
@@ -95,14 +102,15 @@
     <link rel="shortcut icon" href="../assets/ico/favicon.png">
   </head>
 
-  <body>
+  <body data-target=".navbar" data-spy="scroll">
     <div class="navbar navbar-inverse navbar-fixed-bottom" style="position:fixed;">
       <div class="navbar-inner">
         <div class="container">
           <a class="brand" href="#">Stockholms naturligaste lopp</a>
           <ul class="nav nav-pills pull-right">
-            <li class="active"><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
+            <li class="active"><a href="#home">Home</a></li>
+            <li><a href="#safety">Safety</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -112,7 +120,7 @@
     <div id="wrap">
       <div class="container-narrow">
 
-        <div class="jumbotron">
+        <div id="home" class="jumbotron">
           <h1><img src="images/logo.jpg" alt="Sträcklöpet" /></h1>
           <p class="lead fixie"></p>
           <a class="btn btn-large btn-success" href="#">Sign up today</a>
@@ -141,6 +149,13 @@
         </div>
 
         <hr>
+        <div id="safety" class="row-fluid marketing">
+          <div class="span8">
+            <h2>Safety</h2>
+            <p class="fixie" />
+          </div>
+        </div>
+        <hr>
 
         <div id="testimonials" class="row-fluid marketing">
           <div class="span6">
@@ -165,9 +180,8 @@
             <p class="fixie"></p>
           </div>
         </div>
-
       <hr>
-      <div id="contact" class="row-fluid marketing">
+      <div id="contact" class="row-fluid marketing" >
         <h1>Kontakt</h2>
         <div class="span6">
           <h4>Peter Mogård</h4>
